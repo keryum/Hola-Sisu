@@ -1,0 +1,267 @@
+$primary-color: #f4faff;
+$secondary-color: #4489C7;
+$tertiary-color: #fb9b00;
+$primary-text-color: #1D4E7A;
+$font-stack: 'IBM Plex Sans', sans-serif;
+
+* {
+    padding: 0;
+    border: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: $font-stack;
+}
+
+    .navbar {
+        display: grid;
+        background-color: $primary-text-color;
+        width: 100%;
+        height: 100px;
+        justify-content: space-evenly;
+    }
+
+        .navbar-container {
+            display: flex;
+            width: 80vw;
+            height: 100px;
+            align-content: center;
+            justify-content: space-between;
+        }
+
+            .left-navbar {
+                display: grid;
+                align-content: center;
+            }
+
+                .navbar .navbar-container .left-navbar .logo-container {
+                    width: 600px;
+                    height: 80px;
+                    margin: 0;
+                }
+
+                    .logo {
+                        width: auto;
+                        height: 80px;
+                    }
+
+            .navbar .navbar-container .right-navbar {
+                display: flex;
+                width: auto;
+                height: 100px;
+            }
+
+                .right-navbar .redes-sociales {
+                    display: flex;
+                    height: 100px;
+                    width: 300px;
+                    align-items: center;
+                    justify-content: end;
+                    gap: 20px;
+                }
+
+                    .redes-sociales a img {
+                        width: 40px;
+                        height: 40px;
+                        cursor: pointer;
+                    }
+
+    .main-section {
+        display: grid;
+        background-color: $primary-color;
+    }
+
+
+// Sección 1
+
+        .section-1 {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            height: auto;
+            width: 90vw;
+            justify-self: end;
+        }
+
+            .section-1-text{
+                display: grid;
+                place-content: center;
+                margin-right: 50px;
+            }
+
+                .section-1-text h2 {
+                    color: $primary-text-color;
+                    font-size: 70px;
+                }
+
+                .section-1-text ul {
+                    color: $primary-text-color;
+                    font-size: x-large;
+                    justify-self: start;
+                    list-style:circle;
+                    list-style-position:inside;
+                }
+
+                .section-1-text ul li {
+                    margin: 20px 0;
+                }
+
+            .img-section-1 {
+                display: flex;
+                margin: 0;
+                width: auto;
+                justify-content: end;
+            }
+
+                .img-section-1 img {
+                    width: 30vw;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        
+
+// sección "servicios"
+
+        .servicios {
+            display: grid;
+            background-color: $primary-color;
+            text-align: center;
+        }
+
+            .servicios h2 {
+                color: $primary-text-color;
+                font-size: 70px;
+            }
+
+            .servicios-cards-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .servicios-cards-container div {
+                display: grid;
+                align-items: center;
+            }
+            
+            .servicios-cards-container div h3 {
+                color: $primary-text-color;
+                font-size: x-large;
+                height: 80px;
+                margin: 0 0 5px 0;
+            }
+            .servicios-cards-container div figure{
+                position: relative;
+                margin: 0;
+                align-items: center;
+                transition: 0.5s;
+            }
+            
+            .servicios-cards-container div figure:hover{
+                scale: 1.1;
+                z-index: 10;
+            }
+            
+            
+            .texto-encima {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                color: transparent;
+                font-size: auto;
+                font-weight: 700;
+                top: 0;
+                transition: 0.5s;
+                padding: 40px;
+                box-sizing: border-box;
+            }
+            
+            .texto-encima:hover {
+                color: black;
+                background-color: #f4faffe0;
+            }
+
+            .container-img-card-1 img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+
+            .container-img-card-2 img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+            
+            .container-img-card-3 img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+            
+            .container-img-card-4 img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+            }
+
+// sección "¿Qué significa SISU"
+
+        .main-section .section-3 {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            background-color: $primary-text-color;
+            height: auto;
+            width: 100%;
+            box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1);
+            }
+            
+            .section-3 figure {
+                padding: 0;
+                margin: 0;
+            }
+
+            .section-3 figure img {
+                height: 100%;
+                width: 30vw;
+                object-position: 70%;
+                object-fit: cover;
+            }
+
+            .section-3-text {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr 1/2fr;
+                justify-content: space-between;
+                margin: 0 5vw 70px;
+
+            }
+
+            .section-3-text h2 {
+                color: $primary-color;
+                align-self: center;
+                font-size: 70px;
+            }
+
+            .section-3-text p {
+                color: $primary-color;
+                font-size:x-large;
+                line-height: 40px;
+                margin: 0;
+            }
+
+
+.footer {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    box-shadow: inset 0 1px 3em rgba(0,0,0,0.1);
+    background-color: $primary-text-color;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    box-shadow: inset 0 -5em 3em rgba(0,0,0,0.1);
+    color: $primary-color;
+    place-content: center;
+}
