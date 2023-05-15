@@ -51,20 +51,24 @@ function scrollToServicios() {
 function scrollToQueEsHolaSisu() {
     mobileMenu.classList.add('inactive')
     queEsHolaSisuSection.scrollIntoView()
+    quienesSomosMenu.classList.add("inactive")
 }
 
 function scrollToQueSignificaSisu() {
     mobileMenu.classList.add('inactive')
     queSignificaSisuSection.scrollIntoView()
+    quienesSomosMenu.classList.add("inactive")
 }
 
 function scrollToQueHacemos() {
     mobileMenu.classList.add('inactive')
+    queHacemosMenu.classList.add("inactive")
     queHacemosSection.scrollIntoView()
 }
 
 function scrollToComoLoHacemos() {
     mobileMenu.classList.add('inactive')
+    queHacemosMenu.classList.add("inactive")
     comoLoHacemosSection.scrollIntoView()
 }
 

@@ -437,11 +437,10 @@ body {
      object-fit: cover;
 }
 
-.main-section .section-3 {
+.section-3 {
   display: grid;
   grid-template-columns: auto 1fr;
   background-color: #1D4E7A;
-  height: auto;
   width: 90%;
   height: 100vh;
 }
@@ -462,9 +461,9 @@ body {
 
 .section-3-text {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  justify-content: space-between;
-  margin: 0 5vw 70px;
+  grid-template-rows: 1fr 0.5fr 0.5fr 0.2fr;
+  place-content: center;
+  margin: 0 5vw;
 }
 
 .section-3-text h2 {
@@ -506,7 +505,7 @@ body {
     position: fixed;
     height: 70px;
     bottom: 30px;
-    right: 10px;
+    right: 5px;
     background-color: #1D4E7A;
     justify-content: center;
     align-items: center;
@@ -540,16 +539,15 @@ body {
   .section-1, .section-3, .como-lo-hacemos, .quienes-somos {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    width: auto;
     justify-self: center;
     justify-content: center;
-    padding-top: 100px;
+    padding: 100px 0 100px 0;
   }
   .section-1 img, .section-3 img, .como-lo-hacemos img, .quienes-somos img {
     display: none;
-    width: 50%;
-    height: 500px;
   }
   .section-3-text {
     margin-top: 70px;
@@ -579,6 +577,12 @@ body {
   }
   .cerrar-mobile-menu-Btn {
     display: block;
+  }
+  .section-3 {
+    padding-top: 0;
+  }
+  .section-3-text {
+    margin-top: 0;
   }
   h2 {
     font-size: 3rem !important;
