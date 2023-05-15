@@ -41,7 +41,7 @@ function toggleMobileMenu() {
 
 function scrollToServicios() {
     mobileMenu.classList.add('inactive')
-    serviciosSection.scrollIntoView(true)
+    serviciosSection.scrollIntoView()
     quienesSomosMenu.classList.add("inactive")
     queHacemosMenu.classList.add("inactive")
 }
