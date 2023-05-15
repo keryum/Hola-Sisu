@@ -11,6 +11,10 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+.inactive {
+  display: none;
+}
+
 .navbar {
   display: grid;
   background-color: #1D4E7A;
@@ -23,11 +27,11 @@ body {
 }
 
 .navbar-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   width: 80vw;
   height: 100px;
   align-content: center;
-  justify-content: space-between;
 }
 
 .left-navbar {
@@ -36,7 +40,6 @@ body {
 }
 
 .navbar .navbar-container .left-navbar .logo-container {
-  width: 600px;
   height: 80px;
   margin: 0;
 }
@@ -46,16 +49,76 @@ body {
   height: 80px;
 }
 
-.navbar .navbar-container .right-navbar {
+.middle-navbar {
+  display: grid;
+  place-content: center;
+}
+
+.desktop-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: large;
+  gap: 100px;
+}
+
+.container-quienes-somos {
+  position: relative;
+  color: #f4faff;
+  text-align: center;
+}
+
+.quienes-somos-Btn,
+.que-hacemos-Btn,
+.servicios-Btn {
+  cursor: pointer;
+}
+
+.menu-quienes-somos,
+.menu-que-hacemos {
+  position: absolute;
+  background-color: #1D4E7A;
+  width: 120%;
+  left: -10%;
+  border-radius: 4px;
+}
+
+.menu-quienes-somos ul,
+.menu-que-hacemos ul {
+  display: grid;
+  list-style: none;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 40px;
+  gap: 20px;
+  padding: 30px 0 0 0;
+}
+
+.menu-quienes-somos ul li,
+.menu-que-hacemos ul li {
+  cursor: pointer;
+}
+
+.container-que-hacemos {
+  position: relative;
+  color: #f4faff;
+  text-align: center;
+}
+
+.container-servicios {
+  color: #f4faff;
+}
+
+.right-navbar {
   display: flex;
   width: auto;
   height: 100px;
+  place-content: end;
 }
 
 .right-navbar .redes-sociales {
   display: flex;
   height: 100px;
-  width: 300px;
+  width: auto;
   align-items: center;
   justify-content: end;
   gap: 20px;
@@ -379,6 +442,9 @@ body {
 }
 
 @media (max-width: 1100px) {
+  .middle-navbar {
+    display: none;
+  }
   #right-navbar-mobile {
     position: fixed;
     height: 70px;
@@ -394,7 +460,6 @@ body {
   }
   #redes-sociales-mobile {
     justify-content: center;
-    margin-right: 80px;
   }
   nav, .navbar-container, .left-navbar, .logo-container {
     display: grid;
@@ -406,8 +471,5 @@ body {
   }
   .section-3 {
     width: 100vw !important;
-  }
-  .h2 {
-    text-align: start;
   }
 }/*# sourceMappingURL=main.css.map */
