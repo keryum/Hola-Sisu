@@ -55,16 +55,26 @@ body {
                 cursor: pointer;
             }
 
+            .cerrar-mobile-menu-Btn {
+                display: none;
+                position: absolute;
+                justify-self: start;
+                width: 14px;
+                margin-left: 40px;
+                top: 40px;
+                rotate: 180deg;
+            }
+
                 .logo-container {
                     display: flex;
                     width: auto;
-                    height: 80px;
+                    height: 100px;
                     margin: 0;
                 }
 
                     .logo {
                         width: auto;
-                        height: 80px;
+                        height: 100px;
                     }
                 
             .middle-navbar {
@@ -76,6 +86,7 @@ body {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 font-size: large;
+                align-items: center;
                 gap: 100px;
             }
 
@@ -124,6 +135,7 @@ body {
 
             .container-servicios {
                 color: $primary-color;
+                text-align: center;
             }
 
             .right-navbar {
@@ -510,8 +522,8 @@ body {
     #right-navbar-mobile {
         position: fixed;
         height: 70px;
-        bottom: 10px;
-        right: 0;
+        bottom: 30px;
+        right: 10px;
         background-color: #1D4E7A;
         justify-content: center;
         align-items: center;
@@ -532,8 +544,9 @@ body {
         place-content: center;
     }
 
-    .section-1, .como-lo-hacemos, .quienes-somos, .servicios {
-        width: 100vw;
+    .section-1, .como-lo-hacemos, .quienes-somos, .servicios, .section-3 {
+        width: 100%;
+        padding-top: 100px;
     }
 
     .section-3 {
@@ -551,16 +564,25 @@ body {
     .section-1, .section-3, .como-lo-hacemos, .quienes-somos {
         display: flex;
         flex-direction: column;
-        height: auto;
+        height: 100vh;
         width: 100%;
         justify-self: center;
-        margin: 150px 20px 100px 20px;
         justify-content: center;
+        padding-top: 100px;
     }
 
     .section-1 img, .section-3 img, .como-lo-hacemos img, .quienes-somos img {
-        width: 100%;
+        display: none;
+        width: 50%;
         height: 500px;
+    }
+
+    .section-3-text {
+        margin-top: 70px;
+    }
+
+    .servicios {
+        padding-top: 100px;
     }
 
     li, p {
@@ -571,5 +593,29 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         gap: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        position:relative !important;
+    }
+    .mobile-menu {
+        position: absolute;
+        top: -50px;
+        margin: 0;
+        padding: 0;
+        z-index: 30;
+    }
+
+    .cerrar-mobile-menu-Btn {
+        display: block;
+    }
+
+    h2 {
+        font-size: 3rem !important;
+    }
+    li, p {
+        font-size: .9em;
     }
 }
